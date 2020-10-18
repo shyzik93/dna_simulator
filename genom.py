@@ -24,6 +24,10 @@ https://ftp.ncbi.nlm.nih.gov/refseq/release/viral/
 https://coderlessons.com/tutorials/python-technologies/izuchite-biopython/biopython-modul-biosql
 + Introduction to SeqIO
 https://biopython.org/wiki/SeqIO
+
+База данных белков:
+https://ru.wikipedia.org/wiki/UniProt
+http://www.uniprot.org/
 '''
 
 # Азотистые основания
