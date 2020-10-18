@@ -2,7 +2,7 @@ class Restrictase:
     """
     Объект фермента Рестриктаз (эндонуклеаза рестрикции)
     """
-    def __init__(self):
+    def __init__(self, type):
         pass
 
     def restriction(self):
