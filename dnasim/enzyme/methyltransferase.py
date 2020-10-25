@@ -1,4 +1,4 @@
-from enzyme.enzyme import Enzyme
+from dnasim.enzyme.enzyme import Enzyme
 
 
 class Methyltransferase(Enzyme):
@@ -9,9 +9,4 @@ class Methyltransferase(Enzyme):
         ec_number = None  # TODO: Указать Шифр КФ для метилтрансферазы
         super().__init__(ec_number)
 
-    def Methylation(self):
-        """
-        Метилироваие - добавление метильных групп к азотистым основаниям нуклеотидов
-        :return:
-        """
-        return None
+

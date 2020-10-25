@@ -1,4 +1,4 @@
-from enzyme.enzyme import Enzyme
+from dnasim.enzyme.enzyme import Enzyme
 
 
 class Restrictase(Enzyme):
@@ -9,9 +9,4 @@ class Restrictase(Enzyme):
         ec_number = None  # TODO: Указать Шифр КФ для рестриктазы
         super().__init__(ec_number)
 
-    def restriction(self):
-        """
-        Рестрикция - разрезание ДНК на ферменты
-        :return:
-        """
-        return None
+
