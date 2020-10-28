@@ -1,6 +1,8 @@
-from typing import List
+from typing import List, Union
 from dnasim.nucleic_acid import NucleicAcid
-from dnasim.enzyme.methyltransferase import Methyltransferase
+from dnasim.enzyme.enzyme import Enzyme
+from dnasim.enzyme.dna_ligase import DNALigase
+from dnasim.enzyme.dna_methyltransferase import DNAMethyltransferase
 from dnasim.enzyme.restrictase import Restrictase
 from dnasim.protein import Protein
 
@@ -29,7 +31,7 @@ def translation(rna: NucleicAcid) -> Protein:
     return None
 
 
-def restriction(dna: NucleicAcid, restrictase: Restrictase, sites) -> List[NucleicAcid]:
+def restriction(dna: NucleicAcid, restrictase: Union[Enzyme, Restrictase], sites) -> List[NucleicAcid]:
     """
     Рестрикция - разрезание ДНК на ферменты
     :param dna: разрезаемая ДНК
@@ -37,12 +39,22 @@ def restriction(dna: NucleicAcid, restrictase: Restrictase, sites) -> List[Nucle
     :param restriction_sites: сайты рестрикции - участки ДНК, по которым осуществляется разрезание
     :return:
     """
+    return []
+
+
+def methylation(dna: NucleicAcid, methyltransferase: Union[Enzyme, DNAMethyltransferase]) -> None:
+    """
+    Метилироваие - добавление метильных групп к азотистым основаниям нуклеотидов.
+    Является защитным механизмом от рестрикции молекулы ДНК
+    :return:
+    """
     return None
 
 
-def methylation(dna: NucleicAcid, methyltransferase: Methyltransferase) -> NucleicAcid:
+def ligation(dna: NucleicAcid, dna_ligase: Union[Enzyme, DNALigase]) -> None:
     """
-    Метилироваие - добавление метильных групп к азотистым основаниям нуклеотидов
+    Лигирование - восстановление сахаро-фосфатного остова в молекуле ДНК
+    https://en.wikipedia.org/wiki/Ligation_(molecular_biology)
     :return:
     """
     return None

@@ -1,10 +1,11 @@
 from dnasim.enzyme.enzyme import Enzyme
 
 
-class Methyltransferase(Enzyme):
-    def __init__(self, can_restrict=False, can_methylate=True):
+class DNALigase(Enzyme):
+    def __init__(self):
         """
-        Объект фермента Метилтрансфераза
+        Объект фермента ДНК-лизы
+        https://en.wikipedia.org/wiki/DNA_ligase
         """
         ec_number = None  # TODO: Указать Шифр КФ для метилтрансферазы
         super().__init__(ec_number)
